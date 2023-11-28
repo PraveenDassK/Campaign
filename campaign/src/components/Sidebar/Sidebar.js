@@ -38,7 +38,7 @@ const Sidebar = () => {
   return (
     <div className='w-[6%] h-[100vh] bg-[#001738] flex  items-center pt-[4%] flex-col'>
       <img src={AppLogo} alt='app_logo' className='h-[40px] w-[40px]' />
-      <div className='my-20 w-[100%]'>
+      <div className='my-[45px] w-[100%]'>
         {sideBarData.map((eachValue, i) => {
           return (
             <SideBarIcon
