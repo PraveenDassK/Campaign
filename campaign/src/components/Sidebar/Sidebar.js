@@ -36,12 +36,13 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div className='w-[6%] h-[100vh] bg-[#001738] flex  items-center pt-[4%] flex-col'>
+    <div className='w-[6%] min-h-[100vh] bg-[#001738] flex  items-center pt-[4%] flex-col'>
       <img src={AppLogo} alt='app_logo' className='h-[40px] w-[40px]' />
       <div className='my-[45px] w-[100%]'>
         {sideBarData.map((eachValue, i) => {
           return (
             <SideBarIcon
+              key={i}
               iconImage={eachValue?.image}
               title={eachValue?.title}
               selected={location.pathname === eachValue?.route ? true : false}
@@ -55,7 +56,6 @@ const Sidebar = () => {
 };
 
 const SideBarIcon = ({ iconImage, title, handleClick, selected }) => {
-  console.log(selected);
   return (
     <div
       onClick={handleClick}
